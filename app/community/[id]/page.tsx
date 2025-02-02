@@ -2,7 +2,7 @@ import { fetchCommunities } from "@/utils/fetchCommunities";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, Twitter, Github, Linkedin } from "lucide-react";
+import { Globe, Twitter, Github, Linkedin, MapPin } from "lucide-react";
 
 export default async function CommunityPage({
   params,
@@ -31,12 +31,20 @@ export default async function CommunityPage({
     <div className='container mx-auto px-4 py-8'>
       {/* Header Section */}
       <header className='mb-10'>
-        <h1 className='text-5xl font-extrabold text-gray-900 mb-4'>
-          {community.name}
-        </h1>
+        <div className='flex items-end text-sm text-muted-foreground mb-4'>
+          <h1 className='text-5xl font-extrabold text-gray-900 '>
+            {community.name}
+          </h1>
+          <div className='flex items-center'>
+            <MapPin className='h-4 w-4 text-gray-600' />
+            <span className=' text-gray-600'>{community.province}</span>
+          </div>
+        </div>
+
         <Badge variant='secondary' className='mb-4 text-lg px-3 py-1'>
           {community.category}
         </Badge>
+
         <div className='flex flex-col md:flex-row gap-4 justify-between'>
           <div className='max-w-2xl w-full text-gray-700 '>
             <h2 className='text-xl font-bold text-gray-800'> Description</h2>
