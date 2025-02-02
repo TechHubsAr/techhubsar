@@ -54,6 +54,7 @@ export default async function CommunityPage({
           {community.category}
         </Badge>
 
+
         <div className='flex flex-col md:flex-row gap-4 justify-between'>
           <div className='max-w-2xl w-full text-gray-700 '>
             <h2 className='text-xl font-bold text-gray-800'> Description</h2>
@@ -172,6 +173,7 @@ export default async function CommunityPage({
                   >
                     <Button variant='outline' size='icon'>
                       <Linkedin className='h-5 w-5' />
+
                     </Button>
                   </a>
                 )}

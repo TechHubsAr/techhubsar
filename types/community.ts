@@ -18,6 +18,9 @@ export interface Community {
   category: string
   website?: string
   twitter?: string
+  whatsapp?: string;
+  telegram?: string;
+  discord?: string;
   members: Member[]
 }
 
