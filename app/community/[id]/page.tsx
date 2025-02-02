@@ -16,6 +16,11 @@ export default async function CommunityPage({
     return <div>Community not found</div>;
   }
 
+  // Create a sorted copy of the members by name (alphabetical order)
+  const sortedMembers = community.members
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <div className='container mx-auto px-4 py-8'>
       <h1 className='text-4xl font-bold mb-4'>{community.name}</h1>
@@ -49,7 +54,7 @@ export default async function CommunityPage({
 
       <h2 className='text-2xl font-bold mb-4'>Members</h2>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {community.members.map((member, index) => (
+        {sortedMembers.map((member, index) => (
           <Card key={index}>
             <CardHeader>
               <CardTitle>{member.name}</CardTitle>
