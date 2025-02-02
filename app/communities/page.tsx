@@ -108,20 +108,34 @@ export default function CommunitiesPage() {
               className='hover:shadow-xl transition-shadow duration-200'
             >
               <CardHeader>
-                <CardTitle>{community.name}</CardTitle>
-                <CardDescription>{community.shortDescription}</CardDescription>
+                <CardTitle className='text-2xl font-bold'>
+                  {community.name}
+                </CardTitle>
+                <CardDescription className='text-muted-foreground/80 text-base min-h-[2rem]'>
+                  {community.shortDescription}
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className='flex justify-between items-center'>
-                  <Badge variant='secondary'>{community.category}</Badge>
-                  <div className='space-x-2'>
+              <CardContent className='space-y-4'>
+                <div className='flex items-center justify-between'>
+                  <Badge
+                    variant='secondary'
+                    className='px-4 py-1 rounded-full bg-accent/10 hover:bg-accent/20 text-foreground font-medium'
+                  >
+                    {community.category}
+                  </Badge>
+                  <div className='flex gap-2'>
                     {community.website && (
                       <a
                         href={community.website}
                         target='_blank'
                         rel='noopener noreferrer'
+                        className='hover:opacity-80 transition-opacity'
                       >
-                        <Button variant='outline' size='icon'>
+                        <Button
+                          variant='ghost'
+                          size='icon'
+                          className='rounded-full'
+                        >
                           <Globe className='h-4 w-4' />
                         </Button>
                       </a>
@@ -131,8 +145,13 @@ export default function CommunitiesPage() {
                         href={`https://twitter.com/${community.twitter}`}
                         target='_blank'
                         rel='noopener noreferrer'
+                        className='hover:opacity-80 transition-opacity'
                       >
-                        <Button variant='outline' size='icon'>
+                        <Button
+                          variant='ghost'
+                          size='icon'
+                          className='rounded-full'
+                        >
                           <Twitter className='h-4 w-4' />
                         </Button>
                       </a>
@@ -141,7 +160,7 @@ export default function CommunitiesPage() {
                 </div>
                 <Link
                   href={`/community/${community.id}`}
-                  className='mt-4 inline-block text-primary hover:underline'
+                  className='inline-block text-primary hover:underline font-medium'
                 >
                   View Details
                 </Link>
