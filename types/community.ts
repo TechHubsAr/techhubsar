@@ -2,6 +2,7 @@ export interface Member {
   name: string
   github?: string
   twitter?: string
+  linkedin?: string;
 }
 
 export interface Community {
