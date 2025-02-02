@@ -2,7 +2,15 @@ import { fetchCommunities } from "@/utils/fetchCommunities";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, Twitter, Github, Linkedin } from "lucide-react";
+import {
+  Globe,
+  Twitter,
+  Github,
+  Linkedin,
+  MessageCircle,
+  Send,
+  MessageSquare,
+} from "lucide-react";
 
 export default async function CommunityPage({
   params,
@@ -45,6 +53,35 @@ export default async function CommunityPage({
             </Button>
           </a>
         )}
+        {community.whatsapp && (
+          <a
+            href={community.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>
+              <MessageCircle className="h-4 w-4" /> Whatsapp
+            </Button>
+          </a>
+        )}
+        {community.telegram && (
+          <a
+            href={community.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>
+              <Send className="h-4 w-4" /> Telegram
+            </Button>
+          </a>
+        )}
+        {community.discord && (
+          <a href={community.discord} target="_blank" rel="noopener noreferrer">
+            <Button>
+              <MessageSquare className="h-4 w-4" /> Discord
+            </Button>
+          </a>
+        )}
       </div>
 
       <h2 className="text-2xl font-bold mb-4">Members</h2>
@@ -84,7 +121,7 @@ export default async function CommunityPage({
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button variant="ghost" size="icon" className="h-6 w-6">
+                    <Button size="icon" className="h-6 w-6">
                       <Linkedin className="h-3 w-3" />
                     </Button>
                   </a>
