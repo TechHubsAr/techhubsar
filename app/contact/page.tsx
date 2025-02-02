@@ -1,68 +1,51 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-
 export default function ContactPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
-      <div className="max-w-2xl mx-auto">
-        <p className="mb-6">
-          Have questions, suggestions, or just want to get in touch? We'd love to hear from you!
+    <div className='container mx-auto px-4 py-12 max-w-4xl'>
+      <h1 className='text-4xl font-bold mb-8 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent'>
+        Contact Us
+      </h1>
+      <div className='bg-background/50 backdrop-blur-sm border border-border/50 shadow-xl rounded-xl p-8'>
+        <p className='text-lg text-muted-foreground mb-6'>
+          Have questions, suggestions, or just want to get in touch? We'd love
+          to hear from you!
         </p>
-        {/* <form className="space-y-6">
-          <div className="space-y-2">
-            <Label htmlFor="name">Name</Label>
-            <Input id="name" placeholder="Your name" required />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="your@email.com" required />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="subject">Subject</Label>
-            <Input id="subject" placeholder="What's this about?" required />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
-            <Textarea id="message" placeholder="Your message here..." required />
-          </div>
-          <Button type="submit">Send Message</Button>
-        </form> */}
-        <div className="mt-12">
-          {/* <h2 className="text-2xl font-semibold mb-4">Other Ways to Reach Us</h2> */}
-          <p>
-            Email:{" "}
-            <a href="mailto:contact@techhubs.ar" className="text-primary hover:underline">
-              contact@techhubs.ar
-            </a>
-          </p>
-          <p>
-            Twitter:{" "}
+        <div className='mt-8 space-y-4'>
+          <h2 className='text-2xl font-semibold mb-6'>Ways to Connect</h2>
+          <div className='space-y-4'>
             <a
-              href="https://twitter.com/techhubsar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              href='mailto:contact@techhubs.ar'
+              className='flex items-center gap-2 p-4 rounded-lg border border-border/50 hover:bg-accent/50 transition-colors'
             >
-              @techhubsar
+              <div className='flex-1'>
+                <h3 className='font-medium'>Email</h3>
+                <p className='text-muted-foreground'>contact@techhubs.ar</p>
+              </div>
             </a>
-          </p>
-          <p>
-            GitHub:{" "}
             <a
-              href="https://github.com/TechHubsAr/techhubsar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              href='https://twitter.com/techhubsar'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center gap-2 p-4 rounded-lg border border-border/50 hover:bg-accent/50 transition-colors'
             >
-              TechHubsAr Repository
+              <div className='flex-1'>
+                <h3 className='font-medium'>Twitter</h3>
+                <p className='text-muted-foreground'>@techhubsar</p>
+              </div>
             </a>
-          </p>
+            <a
+              href='https://github.com/TechHubsAr/techhubsar'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex items-center gap-2 p-4 rounded-lg border border-border/50 hover:bg-accent/50 transition-colors'
+            >
+              <div className='flex-1'>
+                <h3 className='font-medium'>GitHub</h3>
+                <p className='text-muted-foreground'>TechHubsAr Repository</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-

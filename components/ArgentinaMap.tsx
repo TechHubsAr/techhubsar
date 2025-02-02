@@ -1,55 +1,66 @@
-"use client"
+"use client";
 
-import { useState, useCallback } from "react"
-import { useRouter } from "next/navigation"
-import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "react-simple-maps"
-import type { Community } from "../types/community"
-import { useIsMobile } from "../hooks/useIsMobile"
-import type React from "react"
+import { useState, useCallback } from "react";
+import { useRouter } from "next/navigation";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+  ZoomableGroup,
+} from "react-simple-maps";
+import type { Community } from "../types/community";
+import { useIsMobile } from "../hooks/useIsMobile";
+import type React from "react";
 
-const geoUrl =
-  "/argentina-provinces.json"
+const geoUrl = "/argentina-provinces.json";
 
 interface ArgentinaMapProps {
-  communities: Community[]
-  onHoverCommunity: (communityId: string | null) => void
+  communities: Community[];
+  onHoverCommunity: (communityId: string | null) => void;
 }
 
-export default function ArgentinaMap({ communities, onHoverCommunity }: ArgentinaMapProps) {
-  const router = useRouter()
-  const [tooltipContent, setTooltipContent] = useState<{ name: string; location: string } | null>(null)
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
-  const isMobile = useIsMobile()
+export default function ArgentinaMap({
+  communities,
+  onHoverCommunity,
+}: ArgentinaMapProps) {
+  const router = useRouter();
+  const [tooltipContent, setTooltipContent] = useState<{
+    name: string;
+    location: string;
+  } | null>(null);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const isMobile = useIsMobile();
 
   const handleMarkerClick = useCallback(
     (communityId: string) => {
-      router.push(`/community/${communityId}`)
+      router.push(`/community/${communityId}`);
     },
-    [router],
-  )
+    [router]
+  );
 
   const handleMarkerMouseEnter = useCallback(
     (event: React.MouseEvent, community: Community) => {
-      setTooltipContent({ name: community.name, location: community.province })
-      setTooltipPosition({ x: event.clientX, y: event.clientY })
+      setTooltipContent({ name: community.name, location: community.province });
+      setTooltipPosition({ x: event.clientX, y: event.clientY });
       if (!isMobile) {
-        onHoverCommunity(community.id)
+        onHoverCommunity(community.id);
       }
     },
-    [onHoverCommunity, isMobile],
-  )
+    [onHoverCommunity, isMobile]
+  );
 
   const handleMarkerMouseLeave = useCallback(() => {
-    setTooltipContent(null)
+    setTooltipContent(null);
     if (!isMobile) {
-      onHoverCommunity(null)
+      onHoverCommunity(null);
     }
-  }, [onHoverCommunity, isMobile])
+  }, [onHoverCommunity, isMobile]);
 
   return (
-    <div className="w-full h-[300px] lg:h-[600px] bg-card rounded-lg shadow-lg p-4 relative">
+    <div className='w-full h-[300px] lg:h-[600px] bg-card rounded-lg shadow-lg p-4 relative'>
       <ComposableMap
-        projection="geoMercator"
+        projection='geoMercator'
         projectionConfig={{
           scale: isMobile ? 400 : 600,
         }}
@@ -63,8 +74,8 @@ export default function ArgentinaMap({ communities, onHoverCommunity }: Argentin
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill="hsl(var(--muted))"
-                  stroke="#000"
+                  fill='hsl(var(--muted))'
+                  stroke='#000'
                   style={{
                     default: { outline: "none" },
                     // hover: { outline: "none", fill: "hsl(var(--accent))" },
@@ -75,11 +86,14 @@ export default function ArgentinaMap({ communities, onHoverCommunity }: Argentin
             }
           </Geographies>
           {communities.map((community) => (
-            <Marker key={community.id} coordinates={[community.location.lng, community.location.lat]}>
+            <Marker
+              key={community.id}
+              coordinates={[community.location.lng, community.location.lat]}
+            >
               <circle
                 r={isMobile ? 2 : 3}
-                fill="hsl(var(--accent))"
-                stroke="hsl(var(--background))"
+                fill='hsl(var(--accent))'
+                stroke='hsl(var(--background))'
                 strokeWidth={1}
                 style={{ cursor: "pointer" }}
                 onClick={() => handleMarkerClick(community.id)}
@@ -92,18 +106,17 @@ export default function ArgentinaMap({ communities, onHoverCommunity }: Argentin
       </ComposableMap>
       {tooltipContent && (
         <div
-          className="absolute bg-popover text-popover-foreground p-2 rounded shadow-md z-10"
+          className='absolute bg-popover text-popover-foreground p-2 rounded shadow-md z-10'
           style={{
-            left: tooltipPosition.x ,
+            left: tooltipPosition.x,
             top: tooltipPosition.y,
             // transform: "translate(-50%, -100%)",
           }}
         >
-          <p className="font-semibold">{tooltipContent.name}</p>
-          <p className="text-sm">{tooltipContent.location}</p>
+          <p className='font-semibold'>{tooltipContent.name}</p>
+          <p className='text-sm'>{tooltipContent.location}</p>
         </div>
       )}
     </div>
-  )
+  );
 }
-
