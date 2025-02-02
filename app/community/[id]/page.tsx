@@ -2,7 +2,16 @@ import { fetchCommunities } from "@/utils/fetchCommunities";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, Twitter, Github, Linkedin, MapPin } from "lucide-react";
+import {
+  Globe,
+  Twitter,
+  Github,
+  Linkedin,
+  MessageCircle,
+  Send,
+  MessageSquare,
+  MapPin,
+} from "lucide-react";
 
 export default async function CommunityPage({
   params,
@@ -59,29 +68,56 @@ export default async function CommunityPage({
                 href={community.website}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex items-center gap-2 border border-gray-300 rounded-lg px-8 py-6 hover:bg-gray-100 transition shadow-md hover:shadow-xl'
               >
-                <Globe className='h-8 w-8 text-blue-600' />
-                <span className='font-medium text-gray-800 text-lg'>
+                <Button>
+                  <Globe className='mr-2 h-4 w-4' />
                   Website
-                </span>
+                </Button>
               </a>
             )}
             {community.twitter && (
               <a
-                href={
-                  community.twitter.includes("http")
-                    ? community.twitter
-                    : `https://twitter.com/${community.twitter}`
-                }
+                href={`https://twitter.com/${community.twitter}`}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='flex items-center gap-2 border border-gray-300 rounded-lg px-8 py-6 hover:bg-gray-100 transition shadow-md hover:shadow-xl'
               >
-                <Twitter className='h-8 w-8 text-blue-400' />
-                <span className='font-medium text-gray-800 text-lg'>
+                <Button>
+                  <Twitter className='mr-2 h-4 w-4' />
                   Twitter
-                </span>
+                </Button>
+              </a>
+            )}
+            {community.whatsapp && (
+              <a
+                href={community.whatsapp}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Button>
+                  <MessageCircle className='h-4 w-4' /> Whatsapp
+                </Button>
+              </a>
+            )}
+            {community.telegram && (
+              <a
+                href={community.telegram}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Button>
+                  <Send className='h-4 w-4' /> Telegram
+                </Button>
+              </a>
+            )}
+            {community.discord && (
+              <a
+                href={community.discord}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Button>
+                  <MessageSquare className='h-4 w-4' /> Discord
+                </Button>
               </a>
             )}
           </div>
