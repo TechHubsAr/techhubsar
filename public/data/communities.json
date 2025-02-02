@@ -127,32 +127,55 @@
       {
         "name": "Elias Velazquez",
         "github": "eliasvelazquezdev",
-        "twitter": "esvdev"
+        "twitter": "esvdev",
+        "linkedin": "eliassvelazquez"
       },
       {
         "name": "Eros Benitez Dos Santos",
         "github": "Shinigamy19",
-        "twitter": ""
+        "twitter": "",
+        "linkedin": "eros-benitez"
+      },
+      {
+        "name": "Natalia Quevedo",
+        "github": "",
+        "twitter": "",
+        "linkedin": "natalia-a-quevedo"
+      },
+      {
+        "name": "Ana Rivarola",
+        "github": "",
+        "twitter": "",
+        "linkedin": "anabelenrivarola"
       },
       {
         "name": "Jean Roa",
         "github": "jeanroadev",
-        "twitter": ""
+        "twitter": "",
+        "linkedin": "jeanmra"
       },
       {
         "name": "Virginia Garcia",
         "github": "virginia-garcia",
-        "twitter": ""
+        "twitter": "",
+        "linkedin": "garcia-virginia"
       },
       {
         "name": "Nicolas Cruz",
         "github": "NicoFJCruz",
-        "twitter": "NicoCruzDev"
+        "twitter": "NicoCruzDev",
+        "linkedin": "nicofj-cruz"
       },
       {
         "name": "Fernando Cardozo",
         "github": "juanignacioboiko",
         "twitter": "f_l_cl"
+      },
+      {
+        "name": "Claudia Metz",
+        "github": "",
+        "twitter": "",
+        "linkedin": "claudia-metz"
       }
     ]
   }
