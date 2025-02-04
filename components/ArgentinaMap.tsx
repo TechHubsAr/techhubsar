@@ -58,7 +58,9 @@ export default function ArgentinaMap({
   }, [onHoverCommunity, isMobile]);
 
   return (
-    <div className='w-full h-[300px] lg:h-[600px] bg-card rounded-lg shadow-lg p-4 relative'>
+
+    <div className="w-full h-full max-w-full max-h-full lg:h-[600px] bg-card rounded-lg shadow-lg p-4 relative overflow-hidden">
+
       <ComposableMap
         projection='geoMercator'
         projectionConfig={{
@@ -67,9 +69,12 @@ export default function ArgentinaMap({
         width={isMobile ? 400 : 800}
         height={isMobile ? 300 : 600}
       >
-        <ZoomableGroup center={[-65, -38]} zoom={isMobile ? 2 : 3}>
+        <ZoomableGroup
+          center={[-65, -38]}
+          zoom={isMobile ? 2 : 3}
+        >
           <Geographies geography={geoUrl}>
-            {({ geographies }) =>
+            {({ geographies }: { geographies: any[] }) =>
               geographies.map((geo) => (
                 <Geography
                   key={geo.rsmKey}

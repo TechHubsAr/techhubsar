@@ -216,5 +216,106 @@
         "linkedin": "claudia-metz"
       }
     ]
+  },
+  {
+    "id": "4",
+    "name": "Misiones IT",
+    "shortDescription": "Somos una comunidad de desarrollo de software de la provincia de Misiones - Argentina.",
+    "fullDescription": "Somos una comunidad de desarrollo de software de la provincia de Misiones - Argentina, realizamos diversas actividades junto a programadores, diseñadores, educadores y recruiters para formentar el talento local.",
+    "location": {
+      "lat": -27.36708,
+      "lng": -55.89608
+    },
+    "province": "Misiones",
+    "category": "Tech Community",
+    "website": "https://misionesit.com.ar",
+    "twitter": "ComunidadMIT",
+    "members": [
+      {
+        "name": "Nataya Flores",
+        "github": "natayadev",
+        "twitter": "natayadev",
+        "linkedin": "natayadev"
+      },
+      {
+        "name": "Gabito Martin",
+        "twitter": "Gabito_misio",
+        "linkedin": "jonathan-martin-025890b5"
+      },
+      {
+        "name": "Nacho Grillo",
+        "twitter": "DonNacho_ok",
+        "linkedin": "nachogrillo"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Club DevOps (La Plata)",
+    "shortDescription": "Club presencial/virtual sobre IT en general",
+    "fullDescription": "Brindamos un espacio dentro de la universidad de ingeniería enfocado en divulgar diferentes talleres sobre IT en general, los mismos validados por la universidad. Ubicado en Departamento de Electrótecnia, 2do piso, La Plata, Buenos Aires 1900",
+    "location": {
+      "lat": -34.906563260027234,
+      "lng": -57.94212826068306
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://clubdevops.ar/",
+    "members": [
+      {
+        "name": "Jonathan Dyallo",
+        "github": "jd-apprentice",
+        "linkedin": "jgmd"
+      },
+      {
+        "name": "Valentín Cañete",
+        "linkedin": "valentín-cañete"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Sin Jr No Hay Sr",
+    "shortDescription": "Compartimos búsquedas Jr y Trainee, y ayudamos a los nuevos en tech",
+    "fullDescription": "Desde 2020 visibilizamos la necesidad de vacantes de puestos Junior y Trainee en la industria de la tecnología. Acompañamos y potenciamos el proceso laboral de quienes empiezan a trabajar en tecnología a través de charlas en vivo, mentorías, capacitaciones, becas, revisiones de CV/LinkedIn/portfolio/royectos, y más. Hemos realizado alianzas y acciones junto a organizaciones, empresas, y startups con foco en el emprendimiento y la tecnología, tales como Disney, Santander Tecnología Argentina, Humai, ADA, Deel, Nerdearla, Universidad Tecmilenio, Endeavor, Kopius, Jupi Digital, Campus Party Argentina, Guayerd, Coderhouse, Eidos, Incluyeme.com, Microverse, NUCBA, y otras.",
+    "location": {
+      "lat": -34.5907347,
+      "lng": -58.6331832
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://sinjrnohaysr.com/",
+    "members": [
+      {
+        "name": "Jimmy Adaro",
+        "github": "jimmyadaro",
+        "linkedin": "jimmy-adaro"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "HackTandil",
+    "shortDescription": "Un espacio comunitario para conocer personas que hacen tecnología en Tandil.",
+    "fullDescription": "Un espacio comunitario para conocer personas que hacen tecnología en Tandil.",
+    "location": {
+      "lat": -37.191801,
+      "lng": -59.075938
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://hacktandil.tech/",
+    "members": [
+      {
+        "name": "Tadeo Donegana Braunschweig",
+        "github": "tadeodonegana",
+        "linkedin": "tadeodonegana"
+      },
+      {
+        "name": "Dante Martinez",
+        "github": "d4rm5",
+        "linkedin": "dantemartinez5"
+      }
+    ]
   }
 ]

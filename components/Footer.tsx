@@ -3,23 +3,23 @@ import { Github } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-muted mt-auto">
-      <div className="container mx-auto px-4 pt-8 pb-2">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-2">About TechHubsAr</h3>
+    <footer className="bg-muted mt-auto w-full">
+      <div className="container mx-auto px-4 py-6 sm:py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="space-y-2">
+            <h3 className="text-base sm:text-lg font-semibold">About TechHubsAr</h3>
             <p className="text-sm text-muted-foreground">
               TechHubsAr is a community-driven project showcasing tech
               communities across Argentina.
             </p>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Important Links</h3>
-            <ul className="space-y-2">
+          <div className="space-y-2">
+            <h3 className="text-base sm:text-lg font-semibold">Important Links</h3>
+            <ul className="space-y-1.5">
               <li>
                 <Link
                   href="/add-community"
-                  className="text-sm text-primary hover:underline"
+                  className="text-sm text-primary hover:underline inline-block"
                 >
                   Add New Community
                 </Link>
@@ -27,7 +27,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-primary hover:underline"
+                  className="text-sm text-primary hover:underline inline-block"
                 >
                   About Us
                 </Link>
@@ -35,15 +35,15 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-primary hover:underline"
+                  className="text-sm text-primary hover:underline inline-block"
                 >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Connect</h3>
+          <div className="space-y-2">
+            <h3 className="text-base sm:text-lg font-semibold">Connect</h3>
             <a
               href="https://github.com/TechHubsAr/techhubsar"
               target="_blank"
@@ -55,8 +55,8 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="mt-8 pt-4 border-t border-border text-center text-sm text-muted-foreground">
-          <p>
+        <div className="mt-6 sm:mt-8 pt-4 border-t border-border text-center">
+          <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} TechHubsAr. All rights reserved.
           </p>
         </div>
