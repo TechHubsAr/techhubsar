@@ -339,7 +339,7 @@
       },
       {
         "name": "Mariano",
-        "github": "mariano-perez-rodriguez",
+        "github": "mariano-perez-rodriguez"
       },
       {
         "name": "Jota",
@@ -389,33 +389,80 @@
     ]
   },
   {
-    "id": "9",
-    "name": "Debatech Formosa",
-    "shortDescription": "Comunidad Friki de formosa.",
-    "fullDescription": " Organizamos encuentros mensuales donde speakers comparten charlas sobre diversos temas o stacks tecnológicos, mientras disfrutamos de cervezas y snacks.",
+      "id": "9",
+      "name": "Debatech Formosa",
+      "shortDescription": "Comunidad Friki de formosa.",
+      "fullDescription": " Organizamos encuentros mensuales donde speakers comparten charlas sobre diversos temas o stacks tecnológicos, mientras disfrutamos de cervezas y snacks.",
+      "location": {
+          "lat": -26.18489,
+          "lng": -58.17313
+      },
+      "province": "Formosa Capital",
+      "category": "Tech Community",
+      "website": "https://x.com/gdgformosa",
+      "twitter": "gdgformosa",
+      "members": [
+          {
+              "name": "Alexis Quiñonez",
+              "github": "alexistec",
+              "twitter": "alexis_quionez"
+          },
+          {
+              "name": "Walter Gerez",
+              "github": "*",
+              "twitter": "wgerez"
+          },
+          {
+              "name": "Ariel Montenegro",
+              "github": "*",
+              "linkedin": "https://www.linkedin.com/in/montenegroariel"
+          }
+      ]
+  },
+  {
+      "id": "10",
+      "name": "Argentina Developer",
+      "shortDescription": "Es una comunidad de desarrolladores argentinos.",
+      "fullDescription": "Somos una comunidad orientada al (y para) el desarrollo de software y otras áreas en IT. Nuestro objetivo es compartir conocimientos, experiencias y oportunidades laborales. Traé el mate y acompañanos!",
+      "location": {
+          "lat": -34.6039005,
+          "lng": -58.3808425
+      },
+      "province": "Buenos Aires",
+      "category": "Tech Community",
+      "website": "https://argentinadeveloper.vercel.app/",
+      "members": [
+          {
+              "name": "Nicolas Suarez",
+              "github": "imnicolas"
+          },
+          {
+              "name": "Paula Gonzalez",
+              "github": "PauTG"
+          }
+      ]
+  },
+  {
+    "id": "11",
+    "name": "React Buenos Aires",
+    "shortDescription": "Comunidad de desarrolladores de React en Buenos Aires.",
+    "fullDescription": "React Buenos Aires es un grupo que reúne a desarrolladores y entusiastas de React y su ecosistema en Argentina. Organizamos charlas, talleres y espacios de networking para compartir conocimiento, debatir las últimas tendencias y fortalecer la comunidad local. Nuestro objetivo es fomentar la colaboración y el aprendizaje continuo, creando un entorno inclusivo para todos aquellos interesados en la librería de JavaScript más popular del mundo.",
     "location": {
-      "lat": -26.18489,
-      "lng": -58.17313
+      "lat": -34.6157129,
+      "lng": -58.5981081
     },
-    "province": "Formosa Capital",
+    "province": "Buenos Aires",
     "category": "Tech Community",
-    "website": "https://x.com/gdgformosa",
-    "twitter": "gdgformosa",
+    "website": "https://www.meetup.com/es-ES/react-en-buenos-aires/",
+    "twitter": "https://x.com/React_BA",
+    "linkedin": "https://www.linkedin.com/company/100033526/admin/dashboard/",
+    "instagram": "https://www.instagram.com/react_ba/",
     "members": [
       {
-        "name": "Alexis Quiñonez",
-        "github": "alexistec",
-        "twitter": "alexis_quionez"
-      },
-      {
-        "name": "Walter Gerez",
-        "github": "*",
-        "twitter": "wgerez"
-      },
-      {
-        "name": "Ariel Montenegro",
-        "github": "*",
-        "linkedin": "https://www.linkedin.com/in/montenegroariel"
+        "name": "Mariano Vazquez",
+        "github": "nanovazquez",
+        "twitter": "nanovazquez__",
+        "linkedin": "nanovazquez"
       }
     ]
   }
