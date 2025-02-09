@@ -8,6 +8,7 @@ export interface Member {
 export interface Community {
   id: string
   name: string
+  slug: string
   shortDescription: string
   fullDescription: string
   location: {

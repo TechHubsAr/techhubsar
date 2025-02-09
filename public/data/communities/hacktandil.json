@@ -1,0 +1,26 @@
+{
+    "id": "7",
+    "name": "HackTandil",
+    "shortDescription": "Un espacio comunitario para conocer personas que hacen tecnología en Tandil.",
+    "fullDescription": "Un espacio comunitario para conocer personas que hacen tecnología en Tandil.",
+    "location": {
+        "lat": -37.191801,
+        "lng": -59.075938
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://hacktandil.tech/",
+    "members": [
+        {
+            "name": "Tadeo Donegana Braunschweig",
+            "github": "tadeodonegana",
+            "linkedin": "tadeodonegana"
+        },
+        {
+            "name": "Dante Martinez",
+            "github": "d4rm5",
+            "linkedin": "dantemartinez5"
+        }
+    ],
+    "slug": "hacktandil"
+}

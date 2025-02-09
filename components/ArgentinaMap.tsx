@@ -68,7 +68,7 @@ export default function ArgentinaMap({
         });
 
         if (!isMobile) {
-          onHoverCommunity(community.id);
+          onHoverCommunity(community.slug);
         }
       }
     },
@@ -123,7 +123,7 @@ export default function ArgentinaMap({
           </Geographies>
           {communities.map((community) => (
             <Marker
-              key={community.id}
+              key={community.slug}
               coordinates={[community.location.lng, community.location.lat]}
             >
               <circle
@@ -135,7 +135,7 @@ export default function ArgentinaMap({
                   cursor: 'pointer',
                   transition: 'all 200ms ease-out'
                 }}
-                onClick={() => handleMarkerClick(community.id)}
+                onClick={() => handleMarkerClick(community.slug)}
                 onMouseEnter={(e) => handleMarkerMouseEnter(e, community)}
                 onMouseLeave={handleMarkerMouseLeave}
                 className='hover:r-[6] hover:fill-accent'

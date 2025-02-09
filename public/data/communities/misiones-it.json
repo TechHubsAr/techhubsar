@@ -1,0 +1,33 @@
+{
+    "id": "4",
+    "name": "Misiones IT",
+    "shortDescription": "Somos una comunidad de desarrollo de software de la provincia de Misiones - Argentina.",
+    "fullDescription": "Somos una comunidad de desarrollo de software de la provincia de Misiones - Argentina, realizamos diversas actividades junto a programadores, diseñadores, educadores y recruiters para formentar el talento local.",
+    "location": {
+        "lat": -27.36708,
+        "lng": -55.89608
+    },
+    "province": "Misiones",
+    "category": "Tech Community",
+    "website": "https://misionesit.com.ar",
+    "twitter": "ComunidadMIT",
+    "members": [
+        {
+            "name": "Nataya Flores",
+            "github": "natayadev",
+            "twitter": "natayadev",
+            "linkedin": "natayadev"
+        },
+        {
+            "name": "Gabito Martin",
+            "twitter": "Gabito_misio",
+            "linkedin": "jonathan-martin-025890b5"
+        },
+        {
+            "name": "Nacho Grillo",
+            "twitter": "DonNacho_ok",
+            "linkedin": "nachogrillo"
+        }
+    ],
+    "slug": "misiones-it"
+}

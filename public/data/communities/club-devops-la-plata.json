@@ -1,0 +1,25 @@
+{
+    "id": "5",
+    "name": "Club DevOps (La Plata)",
+    "shortDescription": "Club presencial/virtual sobre IT en general",
+    "fullDescription": "Brindamos un espacio dentro de la universidad de ingeniería enfocado en divulgar diferentes talleres sobre IT en general, los mismos validados por la universidad. Ubicado en Departamento de Electrótecnia, 2do piso, La Plata, Buenos Aires 1900",
+    "location": {
+        "lat": -34.906563260027234,
+        "lng": -57.94212826068306
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://clubdevops.ar/",
+    "members": [
+        {
+            "name": "Jonathan Dyallo",
+            "github": "jd-apprentice",
+            "linkedin": "jgmd"
+        },
+        {
+            "name": "Valentín Cañete",
+            "linkedin": "valentín-cañete"
+        }
+    ],
+    "slug": "club-devops-la-plata"
+}

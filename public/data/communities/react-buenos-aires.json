@@ -1,0 +1,25 @@
+{
+    "id": "10",
+    "name": "React Buenos Aires",
+    "shortDescription": "Comunidad de desarrolladores de React en Buenos Aires.",
+    "fullDescription": "React Buenos Aires es un grupo que reúne a desarrolladores y entusiastas de React y su ecosistema en Argentina. Organizamos charlas, talleres y espacios de networking para compartir conocimiento, debatir las últimas tendencias y fortalecer la comunidad local. Nuestro objetivo es fomentar la colaboración y el aprendizaje continuo, creando un entorno inclusivo para todos aquellos interesados en la librería de JavaScript más popular del mundo.",
+    "location": {
+        "lat": -34.6157129,
+        "lng": -58.5981081
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://www.meetup.com/es-ES/react-en-buenos-aires/",
+    "twitter": "https://x.com/React_BA",
+    "linkedin": "https://www.linkedin.com/company/100033526/admin/dashboard/",
+    "instagram": "https://www.instagram.com/react_ba/",
+    "members": [
+        {
+            "name": "Mariano Vazquez",
+            "github": "nanovazquez",
+            "twitter": "nanovazquez__",
+            "linkedin": "nanovazquez"
+        }
+    ],
+    "slug": "react-buenos-aires"
+}

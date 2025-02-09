@@ -1,0 +1,130 @@
+{
+    "id": "1",
+    "name": "O(n)",
+    "shortDescription": "Crear un entorno propicio para la interacción y el crecimiento intelectual de sus miembros",
+    "fullDescription": "La misión del O(n) Club es crear un entorno propicio para la interacción y el crecimiento intelectual de sus miembros, facilitando el intercambio de conocimientos y experiencias. El club se enfoca en la colaboración y el intercambio de ideas, y en la promoción de la cultura del aprendizaje continuo. Buscamos conectar a personas de altos niveles de conocimiento y experiencia, para que puedan aprender de manera continua y crecer juntos.",
+    "location": {
+        "lat": -34.6037,
+        "lng": -58.3816
+    },
+    "province": "Buenos Aires",
+    "category": "Startups and Innovation",
+    "website": "https://theonclub.com",
+    "twitter": "i/lists/1880013858141589714",
+    "members": [
+        {
+            "name": "Acosta Lautaro",
+            "github": "",
+            "twitter": "lautidev_",
+            "linkedin": "acostalau"
+        },
+        {
+            "name": "Boiko Juan Ignacio",
+            "github": "",
+            "twitter": "BoikoJuani"
+        },
+        {
+            "name": "Habif Gaspar",
+            "github": "",
+            "twitter": "gaspihabif",
+            "linkedin": "gaspar-habif"
+        },
+        {
+            "name": "Holtz Tomas",
+            "github": "",
+            "twitter": "tomasholtz_",
+            "linkedin": "tomas-holtz"
+        },
+        {
+            "name": "Irigoyen Guido",
+            "github": "",
+            "twitter": "GuidooIrigoyen",
+            "linkedin": "guido-irigoyen"
+        },
+        {
+            "name": "Koller Jose Luis",
+            "github": "0xKoller",
+            "twitter": "0xKoller",
+            "linkedin": "joseluiskoller"
+        },
+        {
+            "name": "Lopez Manuel",
+            "github": "",
+            "twitter": "manulpz4",
+            "linkedin": "manulpz4"
+        },
+        {
+            "name": "Montone Nicolás",
+            "github": "",
+            "twitter": "montonenico",
+            "linkedin": "nicolas-montone"
+        },
+        {
+            "name": "Papanicolau Sebastián",
+            "github": "",
+            "twitter": "sebipaps",
+            "linkedin": "sebasti%C3%A1n-papanicolau-10baa91b1"
+        },
+        {
+            "name": "Pedaccio Facundo",
+            "github": "",
+            "twitter": "fpedaccio",
+            "linkedin": "facundo-pedaccio-57a92b1ba"
+        },
+        {
+            "name": "Prados Ignacio",
+            "github": "",
+            "twitter": "ignaprados",
+            "linkedin": "ignaprados"
+        },
+        {
+            "name": "Radovich Valentin",
+            "github": "",
+            "twitter": "software_valen",
+            "linkedin": "valentin-fernandez-radovich"
+        },
+        {
+            "name": "Ratti Valentin",
+            "github": "",
+            "twitter": "vsratti",
+            "linkedin": "valent%C3%ADn-ratti-4120381a6"
+        },
+        {
+            "name": "Rolandi Fausto",
+            "github": "",
+            "twitter": "FaustoR0",
+            "linkedin": "fausto-rolandi"
+        },
+        {
+            "name": "Rojas Alejo",
+            "github": "",
+            "twitter": "alejorrojass",
+            "linkedin": "alejorrojas"
+        },
+        {
+            "name": "Ruberto Santiago",
+            "github": "",
+            "twitter": "SantiagoSirvana",
+            "linkedin": "santiagoruberto"
+        },
+        {
+            "name": "Solanes Fede",
+            "github": "",
+            "twitter": "FedeSolanes",
+            "linkedin": "federico-solanes"
+        },
+        {
+            "name": "Trujillo Luciano",
+            "github": "",
+            "twitter": "LuTrujilloAR",
+            "linkedin": "lucianotrujillo"
+        },
+        {
+            "name": "Zarate Mateo",
+            "github": "",
+            "twitter": "mateozaratef",
+            "linkedin": "mateozarate"
+        }
+    ],
+    "slug": "on"
+}

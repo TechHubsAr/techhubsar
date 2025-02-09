@@ -1,0 +1,71 @@
+{
+    "id": "8",
+    "name": "La Crypta",
+    "shortDescription": "La Crypta es una comunidad argentina dedicada al desarrollo, la educación y el intercambio de conocimientos dentro de los ecosistemas Bitcoin y Nostr.",
+    "fullDescription": "La Crypta es una comunidad argentina dedicada al desarrollo, la educación y el intercambio de conocimientos dentro de los ecosistemas Bitcoin y Nostr.",
+    "location": {
+        "lat": -34.564709,
+        "lng": -58.443054
+    },
+    "province": "Buenos Aires",
+    "category": "Bitcoin Community",
+    "website": "https://lacrypta.ar/",
+    "twitter": "LaCryptaOk",
+    "members": [
+        {
+            "name": "Agustin",
+            "github": "agustinkassis",
+            "twitter": "agustin_kassis"
+        },
+        {
+            "name": "Mariano",
+            "github": "mariano-perez-rodriguez"
+        },
+        {
+            "name": "Jota",
+            "github": "jjramirezn",
+            "twitter": "JuanJoseBTC"
+        },
+        {
+            "name": "Rapax",
+            "github": "rapax00",
+            "twitter": "rapax00"
+        },
+        {
+            "name": "Jona",
+            "github": "unllamas",
+            "twitter": "unllamas"
+        },
+        {
+            "name": "Guadis",
+            "twitter": "guadisguadix"
+        },
+        {
+            "name": "Naranja",
+            "twitter": "dimenaranja"
+        },
+        {
+            "name": "Andrea",
+            "github": "AndreaDiazCorreia",
+            "twitter": "andreadcorreia"
+        },
+        {
+            "name": "Fierillo",
+            "github": "Fierillo",
+            "twitter": "fierillo"
+        },
+        {
+            "name": "Fierillo",
+            "github": "Fierillo",
+            "twitter": "fierillo"
+        },
+        {
+            "name": "Fede"
+        },
+        {
+            "name": "Yayi",
+            "twitter": "yayi_morales_"
+        }
+    ],
+    "slug": "la-crypta"
+}

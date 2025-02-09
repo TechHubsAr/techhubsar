@@ -1,0 +1,64 @@
+{
+    "id": "3",
+    "name": "Share IT",
+    "shortDescription": "Somos una comunidad unida por el deseo de aprender, compartir conocimientos y crecer juntos en el ámbito tecnológico.",
+    "fullDescription": "Share IT es una comunidad de WhatsApp/Discord que reúne a personas de toda índole y de habla hispana, que forman parte o aspiran a formar parte de la industria IT. Nuestro propósito es construir una red de apoyo que permita a sus integrantes progresar como profesionales de esta industria, siempre teniendo en cuenta que la colaboración mutua es el principal motor para un crecimiento sostenible.",
+    "location": {
+        "lat": -34.6131,
+        "lng": -58.3772
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://shareit.lat/aboutus/",
+    "twitter": "",
+    "members": [
+        {
+            "name": "Elias Velazquez",
+            "github": "eliasvelazquezdev",
+            "twitter": "esvdev",
+            "linkedin": "eliassvelazquez"
+        },
+        {
+            "name": "Eros Benitez Dos Santos",
+            "github": "Shinigamy19",
+            "twitter": "",
+            "linkedin": "eros-benitez"
+        },
+        {
+            "name": "Natalia Quevedo",
+            "github": "",
+            "twitter": "",
+            "linkedin": "natalia-a-quevedo"
+        },
+        {
+            "name": "Jean Roa",
+            "github": "jeanroadev",
+            "twitter": "",
+            "linkedin": "jeanmra"
+        },
+        {
+            "name": "Virginia Garcia",
+            "github": "virginia-garcia",
+            "twitter": "",
+            "linkedin": "garcia-virginia"
+        },
+        {
+            "name": "Nicolas Cruz",
+            "github": "NicoFJCruz",
+            "twitter": "NicoCruzDev",
+            "linkedin": "nicofj-cruz"
+        },
+        {
+            "name": "Fernando Cardozo",
+            "github": "juanignacioboiko",
+            "twitter": "f_l_cl"
+        },
+        {
+            "name": "Claudia Metz",
+            "github": "",
+            "twitter": "",
+            "linkedin": "claudia-metz"
+        }
+    ],
+    "slug": "share-it"
+}

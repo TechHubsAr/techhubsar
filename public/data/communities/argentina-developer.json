@@ -1,0 +1,45 @@
+{
+    "id": "9",
+    "name": "Argentina Developer",
+    "shortDescription": "Es una comunidad de desarrolladores argentinos.",
+    "fullDescription": "Somos una comunidad orientada al (y para) el desarrollo de software y otras áreas en IT. Nuestro objetivo es compartir conocimientos, experiencias y oportunidades laborales. Traé el mate y acompañanos!",
+    "location": {
+        "lat": -34.6039005,
+        "lng": -58.3808425
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://argentinadeveloper.vercel.app/",
+    "members": [
+        {
+            "name": "Nicolas Suarez",
+            "github": "imnicolas"
+        },
+        {
+            "name": "Paula Gonzalez",
+            "github": "PauTG"
+        },
+        {
+            "name": "Javier Rodriguez",
+            "github": "javicerodriguez",
+            "twitter": "Javicerodriguez"
+        },
+        {
+            "name": "Brahian Pereyra",
+            "github": "brahianpdev"
+        },
+        {
+            "name": "Nahuel Garrido",
+            "github": "nahugarrido"
+        },
+        {
+            "name": "Esteban Sayago",
+            "github": "puchinn"
+        },
+        {
+            "name": "Alan Farias",
+            "github": "AlanFarias97"
+        }
+    ],
+    "slug": "argentina-developer"
+}

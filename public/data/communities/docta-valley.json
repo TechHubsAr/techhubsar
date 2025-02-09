@@ -1,0 +1,27 @@
+{
+    "id": "2",
+    "name": "Docta Valley",
+    "shortDescription": "Comunidad que conecta founders y builders tech en Córdoba. Ponemos el espacio para propagar ideas, hacer match y generar startups cordobesas.",
+    "fullDescription": "Docta Valley es una comunidad vibrante dedicada a fortalecer el ecosistema tecnológico y emprendedor en Córdoba. Nuestra misión es crear un espacio colaborativo donde founders y builders tech pueden conectarse, compartir conocimientos y recursos, y trabajar juntos para impulsar la próxima generación de startups cordobesas. A través de eventos, mentorías y networking, facilitamos conexiones valiosas que catalizan la innovación y el crecimiento del ecosistema tech local.",
+    "location": {
+        "lat": -31.4201,
+        "lng": -64.1888
+    },
+    "province": "Cordoba",
+    "category": "Startups and Innovation",
+    "website": "https://doctavalley.com",
+    "twitter": "DoctaValley",
+    "members": [
+        {
+            "name": "Matias Vallejos",
+            "github": "matiasvallejosdev",
+            "twitter": "mativallejosdev"
+        },
+        {
+            "name": "Lucas Nasich",
+            "github": "",
+            "twitter": "lucasnasich"
+        }
+    ],
+    "slug": "docta-valley"
+}

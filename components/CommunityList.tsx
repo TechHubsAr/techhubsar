@@ -133,14 +133,14 @@ export default function CommunityList({
       >
         {currentCommunities.map((community) => (
           <motion.li
-            key={community.id}
+            key={community.slug}
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
-            <Link href={`/community/${community.id}`}>
+            <Link href={`/community/${community.slug}`}>
               <CommunityCard
                 community={community}
-                isHovered={hoveredCommunityId === community.id}
+                isHovered={hoveredCommunityId === community.slug}
               />
             </Link>
           </motion.li>

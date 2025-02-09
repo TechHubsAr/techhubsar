@@ -1,0 +1,21 @@
+{
+    "id": "6",
+    "name": "Sin Jr No Hay Sr",
+    "shortDescription": "Compartimos búsquedas Jr y Trainee, y ayudamos a los nuevos en tech",
+    "fullDescription": "Desde 2020 visibilizamos la necesidad de vacantes de puestos Junior y Trainee en la industria de la tecnología. Acompañamos y potenciamos el proceso laboral de quienes empiezan a trabajar en tecnología a través de charlas en vivo, mentorías, capacitaciones, becas, revisiones de CV/LinkedIn/portfolio/royectos, y más. Hemos realizado alianzas y acciones junto a organizaciones, empresas, y startups con foco en el emprendimiento y la tecnología, tales como Disney, Santander Tecnología Argentina, Humai, ADA, Deel, Nerdearla, Universidad Tecmilenio, Endeavor, Kopius, Jupi Digital, Campus Party Argentina, Guayerd, Coderhouse, Eidos, Incluyeme.com, Microverse, NUCBA, y otras.",
+    "location": {
+        "lat": -34.5907347,
+        "lng": -58.6331832
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://sinjrnohaysr.com/",
+    "members": [
+        {
+            "name": "Jimmy Adaro",
+            "github": "jimmyadaro",
+            "linkedin": "jimmy-adaro"
+        }
+    ],
+    "slug": "sin-jr-no-hay-sr"
+}

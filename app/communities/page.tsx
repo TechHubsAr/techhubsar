@@ -168,7 +168,7 @@ function CommunityCard({ community }: { community: Community }) {
 
         <CardFooter className='mt-auto pt-4'>
           <Link
-            href={`/community/${community.id}`}
+            href={`/community/${community.slug}`}
             className='inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-primary/80 transition-colors'
           >
             <span className='relative'>
@@ -293,7 +293,7 @@ export default function CommunitiesPage() {
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
           >
             {filteredCommunities.map((community) => (
-              <CommunityCard key={community.id} community={community} />
+              <CommunityCard key={community.slug} community={community} />
             ))}
           </motion.div>
         </div>
