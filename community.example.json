@@ -1,0 +1,26 @@
+{
+    "id": "x",
+    "name": "Community name",
+    "shortDescription": "",
+    "fullDescription": "",
+    "location": {
+        "lat": -34.6039005,
+        "lng": -58.3808425
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "",
+    "twitter": "",
+    "whatsapp": "",
+    "telegram": "",
+    "discord": "",
+    "members": [
+        {
+            "name": "First Member Name",
+            "github": "",
+            "twitter": "",
+            "linkedin": ""
+        }
+    ],
+    "slug": "community-name"
+}
