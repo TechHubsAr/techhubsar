@@ -1,0 +1,32 @@
+{
+    "id": "11",
+    "name": "Debatech Formosa",
+    "shortDescription": "Comunidad Friki de Formosa.",
+    "fullDescription": "Organizamos encuentros mensuales donde speakers comparten charlas sobre diversos temas o stacks tecnológicos, mientras disfrutamos de cervezas y snacks.",
+    "location": {
+        "lat": -26.18489,
+        "lng": -58.17313
+    },
+    "province": "Formosa Capital",
+    "category": "Tech Community",
+    "website": "https://x.com/gdgformosa",
+    "twitter": "gdgformosa",
+    "members": [
+      {
+        "name": "Alexis Quiñonez",
+        "github": "alexistec",
+        "twitter": "alexis_quionez"
+      },
+      {
+        "name": "Walter Gerez",
+        "github": "*",
+        "twitter": "wgerez"
+      },
+      {
+        "name": "Ariel Montenegro",
+        "github": "*",
+        "linkedin": "https://www.linkedin.com/in/montenegroariel"
+      }
+    ],
+    "slug": "debatech-formosa"
+}
