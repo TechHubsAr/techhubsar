@@ -1,0 +1,32 @@
+{
+    "id": "2022",
+    "name": "DATA SAM",
+    "shortDescription": "Comunidad de estudiantes de la Licenciatura en Ciencia de Datos de la UNSAM.",
+    "fullDescription": "Somos una comunidad que arrancó en el 2022 y hoy en día contamos con más de 500 miembros. Nos gusta hacer proyectos de ciencia de datos aplicada a cualquier área: salud, deportes, finanzas, ambientales, etc. Nos encantaría poder colaborar con otras comunidades y también con organzaciones civiles para llevar a cabo proyectos sociales.",
+    "location": {
+        "lat": -34.5798390,
+        "lng": -58.5266950
+    },
+    "province": "Buenos Aires",
+    "category": "Data Science Community",
+    "website": "https://datasam.com.ar/",
+    "twitter": "https://www.instagram.com/datasamok/",
+    "whatsapp": "",
+    "telegram": "",
+    "discord": "",
+    "members": [
+        {
+            "name": "Joaquin Saposnik",
+            "github": "https://github.com/jsapo95",
+            "twitter": "",
+            "linkedin": "https://ar.linkedin.com/in/joaquin-saposnik"
+        },
+        {
+            "name": "Javier Rodriguez",
+            "github": "https://github.com/javicerodriguez",
+            "twitter": "https://x.com/Javicerodriguez",
+            "linkedin": ""
+        }
+    ],
+    "slug": "data-sam"
+}
