@@ -38,14 +38,17 @@ export default function ArgentinaMap({
     name: string;
     location: string;
   } | null>(null);
-  const [tooltipPosition, setTooltipPosition] = useState<TooltipPosition>({ x: 0, y: 0 });
+  const [tooltipPosition, setTooltipPosition] = useState<TooltipPosition>({
+    x: 0,
+    y: 0,
+  });
   const isMobile = useIsMobile();
 
   const handleMarkerClick = useCallback(
     (communityId: string) => {
       router.push(`/community/${communityId}`);
     },
-    [router]
+    [router],
   );
 
   const handleMarkerMouseEnter = useCallback(
@@ -59,43 +62,49 @@ export default function ArgentinaMap({
 
         setTooltipPosition({
           x: markerRect.left - mapRect.left + markerRect.width / 2,
-          y: markerRect.top - mapRect.top
+          y: markerRect.top - mapRect.top,
         });
 
         setTooltipContent({
           name: community.name,
-          location: community.province
+          location: community.province,
         });
 
-        if (!isMobile) {
-          onHoverCommunity(community.slug);
-        }
+        onHoverCommunity(community.slug);
       }
     },
-    [onHoverCommunity, isMobile]
+    [onHoverCommunity],
   );
 
   const handleMarkerMouseLeave = useCallback(() => {
     setTooltipContent(null);
-    if (!isMobile) {
-      onHoverCommunity(null);
-    }
-  }, [onHoverCommunity, isMobile]);
+    onHoverCommunity(null);
+  }, [onHoverCommunity]);
 
   return (
-    <div ref={mapRef} className='relative w-full h-full flex items-center justify-center bg-card/30 backdrop-blur-sm rounded-xl border border-border/50 p-4'>
+    <div
+      ref={mapRef}
+      className={cn(
+        'relative w-full h-full flex items-center justify-center',
+        'dark:bg-card/30 bg-white/80',
+        'rounded-xl',
+        'dark:border-border/50 border-border/80',
+        'p-4',
+        'dark:shadow-none shadow-sm'
+      )}
+    >
       <ComposableMap
         projection='geoMercator'
         projectionConfig={{
           scale: isMobile ? 400 : 600,
-          center: [-65, -40] // Adjusted center coordinates
+          center: [-65, -40],
         }}
         width={isMobile ? 400 : 800}
         height={isMobile ? 300 : 600}
         className='w-full h-full'
       >
         <ZoomableGroup
-          center={[-65, -40]} // Match projectionConfig center
+          center={[-65, -40]}
           zoom={1}
           minZoom={1}
           maxZoom={8}
@@ -106,14 +115,19 @@ export default function ArgentinaMap({
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill='hsl(var(--muted)/0.3)'
-                  stroke='hsl(var(--border))'
-                  strokeWidth={0.5}
+                  className={cn(
+                    'dark:fill-muted/20',
+                    'fill-muted/60',
+                    'dark:stroke-border',
+                    'stroke-border',
+                    'transition-colors duration-200'
+                  )}
+                  strokeWidth={0.8}
                   style={{
                     default: { outline: 'none' },
                     hover: {
-                      fill: 'hsl(var(--muted)/0.5)',
-                      transition: 'all 250ms'
+                      fill: 'hsl(var(--muted)/0.8)',
+                      transition: 'all 250ms',
                     },
                     pressed: { outline: 'none' },
                   }}
@@ -121,29 +135,40 @@ export default function ArgentinaMap({
               ))
             }
           </Geographies>
-          {communities.map((community) => (
-            <Marker
-              key={community.slug}
-              coordinates={[community.location.lng, community.location.lat]}
-            >
-              <circle
-                r={isMobile ? 3 : 4}
-                fill='hsl(var(--primary))'
-                stroke='hsl(var(--background))'
-                strokeWidth={1.5}
-                style={{
-                  cursor: 'pointer',
-                  transition: 'all 200ms ease-out'
-                }}
-                onClick={() => handleMarkerClick(community.slug)}
-                onMouseEnter={(e) => handleMarkerMouseEnter(e, community)}
-                onMouseLeave={handleMarkerMouseLeave}
-                className='hover:r-[6] hover:fill-accent'
-              />
-            </Marker>
-          ))}
+          {communities
+            .filter((community) => community.location)
+            .map((community, index) => (
+              <Marker
+                key={community.slug}
+                coordinates={[community.location.lng, community.location.lat]}
+              >
+                <motion.circle
+                  r={isMobile ? 3 : 4}
+                  className={cn(
+                    'dark:fill-primary fill-primary',
+                    'dark:stroke-background/80 stroke-white',
+                    'hover:fill-accent dark:hover:fill-accent',
+                    'cursor-pointer'
+                  )}
+                  strokeWidth={2}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 260,
+                    damping: 20,
+                    delay: index * 0.1
+                  }}
+                  onClick={() => handleMarkerClick(community.slug)}
+                  onMouseEnter={(e) => handleMarkerMouseEnter(e, community)}
+                  onMouseLeave={handleMarkerMouseLeave}
+                />
+              </Marker>
+            ))
+          }
         </ZoomableGroup>
       </ComposableMap>
+
       <AnimatePresence>
         {tooltipContent && (
           <motion.div
@@ -152,14 +177,15 @@ export default function ArgentinaMap({
             exit={{ opacity: 0, y: 10 }}
             transition={{
               duration: 0.2,
-              ease: 'easeOut'
+              ease: 'easeOut',
             }}
             className={cn(
               'pointer-events-none absolute z-50',
               'max-w-[200px] min-w-[120px]',
-              'bg-popover/90 backdrop-blur-sm',
-              'border border-border/50',
-              'rounded-lg shadow-xl',
+              'dark:bg-popover/90 bg-popover/95',
+              'dark:border-border/50 border-border/60',
+              'rounded-lg',
+              'dark:shadow-xl shadow-md',
               'p-3 px-4',
               'transform-gpu'
             )}
@@ -167,15 +193,25 @@ export default function ArgentinaMap({
               position: 'absolute',
               left: `${tooltipPosition.x}px`,
               top: `${tooltipPosition.y}px`,
-              transform: 'translate(-50%, -100%)'
+              transform: 'translate(-50%, -100%)',
             }}
           >
             <div className='flex flex-col gap-1'>
-              <p className='font-medium text-sm text-foreground/90'>
+              <p className={cn(
+                'font-medium text-sm',
+                'dark:text-foreground/90 text-foreground',
+                'tracking-tight'
+              )}>
                 {tooltipContent.name}
               </p>
-              <p className='text-xs text-muted-foreground flex items-center gap-1'>
-                <span className='size-1.5 rounded-full bg-primary/80' />
+              <p className={cn(
+                'text-xs flex items-center gap-1',
+                'dark:text-muted-foreground text-muted-foreground/80'
+              )}>
+                <span className={cn(
+                  'size-1.5 rounded-full',
+                  'dark:bg-primary/80 bg-primary/90'
+                )} />
                 {tooltipContent.location}
               </p>
             </div>

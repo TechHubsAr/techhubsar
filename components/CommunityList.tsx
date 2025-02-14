@@ -62,6 +62,7 @@ function CommunityDescription({ community }: { community: Community }) {
             variant='ghost'
             size='sm'
             className='hover:bg-accent/10'
+            aria-label='Website'
             onClick={(e) => {
               e.preventDefault();
               window.open(community.website, '_blank', 'noopener,noreferrer');
@@ -75,6 +76,7 @@ function CommunityDescription({ community }: { community: Community }) {
             variant='ghost'
             size='sm'
             className='hover:bg-accent/10'
+            aria-label='Twitter'
             onClick={(e) => {
               e.preventDefault();
               window.open(`https://x.com/${community.twitter}`, '_blank', 'noopener,noreferrer');
@@ -96,7 +98,12 @@ function CommunityCard({ community, isHovered }: CommunityCardProps) {
       onMouseEnter={() => setLocalHovered(true)}
       onMouseLeave={() => setLocalHovered(false)}
       className={cn(
-        'group w-full h-[280px] p-5 bg-background/50 backdrop-blur-sm rounded-xl flex flex-col gap-4 cursor-pointer border border-border/50 transition-all duration-300 ease-out hover:bg-accent/5',
+        'group w-full h-[280px] p-5 backdrop-blur-sm',
+        'dark:bg-background/50 bg-white',
+        'rounded-xl flex flex-col gap-4 cursor-pointer',
+        'dark:border-border/50 border-border/20',
+        'transition-all duration-300 ease-out',
+        'hover:bg-accent/5',
         (localHovered || isHovered) && 'ring-2 ring-primary/50 ring-offset-2 ring-offset-background shadow-lg'
       )}
     >
@@ -149,7 +156,11 @@ export default function CommunityList({
 
       {totalPages > 1 && (
         <Pagination className='flex justify-center pt-8'>
-          <PaginationContent className='bg-card/30 backdrop-blur-sm rounded-lg border border-border/50 p-2'>
+          <PaginationContent className={cn(
+            'rounded-lg border p-2',
+            'dark:bg-card/30 bg-white',
+            'dark:border-border/50 border-border/20'
+          )}>
             <PaginationItem>
               <PaginationPrevious
                 onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}

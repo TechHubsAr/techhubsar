@@ -26,7 +26,8 @@ export default function RootLayout({
       lang='en'
     >
       <body className={cn(
-        "min-h-screen bg-black/[0.96] antialiased",
+        'min-h-screen antialiased',
+        'dark:bg-black/[0.96] bg-zinc-100',
         GeistSans.className
       )}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>

@@ -12,8 +12,10 @@ export default function AddCommunityButton() {
       <button
         className={cn(
           'group relative overflow-hidden rounded-xl mt-8',
-          'bg-background p-px transition-transform',
-          'active:scale-95 hover:scale-[1.02]'
+          'dark:bg-background bg-white', // Added light mode background
+          'p-px transition-transform',
+          'active:scale-95 hover:scale-[1.02]',
+          'shadow-sm dark:shadow-none' // Added light mode shadow
         )}
       >
         <motion.span
@@ -21,9 +23,12 @@ export default function AddCommunityButton() {
             top: ['50%', '0%', '50%', '100%', '50%'],
             left: ['0%', '50%', '100%', '50%', '0%'],
           }}
-          className='-translate-x-1/2 -translate-y-1/2 absolute z-10 size-8
-            transform-gpu blur-sm transition-transform duration-300
-            group-hover:scale-[3]'
+          className={cn(
+            '-translate-x-1/2 -translate-y-1/2 absolute z-10 size-8',
+            'transform-gpu blur-sm transition-transform duration-300',
+            'group-hover:scale-[3]',
+            'dark:opacity-100 opacity-80' // Reduced opacity for light mode
+          )}
           transition={{
             duration: 3,
             ease: 'linear',
@@ -46,8 +51,12 @@ export default function AddCommunityButton() {
           />
         </motion.span>
 
-        <span className='relative z-10 flex items-center gap-2 rounded-xl bg-background/95
-          px-6 py-3 text-sm font-medium'>
+        <span className={cn(
+          'relative z-10 flex items-center gap-2 rounded-xl',
+          'dark:bg-background/95 bg-white/95',
+          'px-6 py-3 text-sm font-medium',
+          'dark:border-none border border-border/20'
+        )}>
           <motion.span
             animate={{
               backgroundImage: [
@@ -55,15 +64,22 @@ export default function AddCommunityButton() {
                 'linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)))',
               ],
             }}
-            className='flex items-center gap-2 bg-clip-text text-primary transition-colors
-              duration-500 group-hover:text-transparent font-mono'
+            className={cn(
+              'flex items-center gap-2 bg-clip-text',
+              'dark:text-primary text-primary/90',
+              'transition-colors duration-500',
+              'group-hover:text-transparent font-mono'
+            )}
             transition={{
               duration: 2,
               ease: 'linear',
               repeat: Infinity,
             }}
           >
-            <Plus className='w-4 h-4 text-primary' />
+            <Plus className={cn(
+              'w-4 h-4',
+              'dark:text-primary text-primary/90'
+            )} />
             Add new community
           </motion.span>
         </span>

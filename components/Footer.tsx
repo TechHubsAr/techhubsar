@@ -5,7 +5,11 @@ import { cn } from '@/lib/utils';
 
 export default function Footer() {
   return (
-    <footer className='border-t border-border/50 bg-background/50 backdrop-blur-sm mt-auto w-full'>
+    <footer className={cn(
+      'border-t border-border/50',
+      'dark:bg-background/50 bg-white/60 backdrop-blur-sm',
+      'mt-auto w-full'
+    )}>
       <div className='container mx-auto px-4 py-8 md:py-12'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12'>
           <div className='space-y-3'>

@@ -184,28 +184,38 @@ function CommunityCard({ community }: { community: Community }) {
 }
 
 export default function CommunitiesPage() {
+  const [isLoading, setIsLoading] = useState(true);
   const [communities, setCommunities] = useState<Community[]>([]);
   const [filteredCommunities, setFilteredCommunities] = useState<Community[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [provinces, setProvinces] = useState<string[]>([]);
+  const [categories, setCategories] = useState<string[]>(['all']);
+  const [provinces, setProvinces] = useState<string[]>(['all']);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedProvince, setSelectedProvince] = useState<string>('all');
 
   useEffect(() => {
     const loadCommunities = async () => {
-      const fetchedCommunities = await fetchCommunities();
-      setCommunities(fetchedCommunities);
-      setFilteredCommunities(fetchedCommunities);
+      try {
+        setIsLoading(true);
+        const fetchedCommunities = await fetchCommunities();
+        setCommunities(fetchedCommunities);
+        setFilteredCommunities(fetchedCommunities);
 
-      const uniqueCategories = Array.from(
-        new Set(fetchedCommunities.map((c) => c.category))
-      );
-      setCategories(['all', ...uniqueCategories]);
+        // Safely extract and capitalize categories
+        const uniqueCategories = Array.from(
+          new Set(fetchedCommunities.map((c) => c.category).filter(Boolean))
+        );
+        setCategories(['all', ...uniqueCategories]);
 
-      const uniqueProvinces = Array.from(
-        new Set(fetchedCommunities.map((c) => c.province))
-      );
-      setProvinces(['all', ...uniqueProvinces]);
+        // Safely extract and capitalize provinces
+        const uniqueProvinces = Array.from(
+          new Set(fetchedCommunities.map((c) => c.province).filter(Boolean))
+        );
+        setProvinces(['all', ...uniqueProvinces]);
+      } catch (error) {
+        console.error('Failed to load communities:', error);
+      } finally {
+        setIsLoading(false);
+      }
     };
     loadCommunities();
   }, []);
@@ -220,6 +230,12 @@ export default function CommunitiesPage() {
     }
     setFilteredCommunities(filtered);
   }, [selectedCategory, selectedProvince, communities]);
+
+  // Helper function to safely capitalize strings
+  const capitalize = (str: string) => {
+    if (!str) return '';
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  };
 
   return (
     <div className='relative min-h-screen w-full overflow-hidden'>
@@ -265,20 +281,20 @@ export default function CommunitiesPage() {
                         'hover:bg-accent/10'
                       )}
                     >
-                      {category.charAt(0).toUpperCase() + category.slice(1)}
+                      {capitalize(category)}
                     </TabsTrigger>
                   ))}
                 </TabsList>
               </Tabs>
 
-              <Select onValueChange={setSelectedProvince}>
+              <Select onValueChange={setSelectedProvince} defaultValue='all'>
                 <SelectTrigger className='w-full md:w-[200px]'>
                   <SelectValue placeholder='Filter by province' />
                 </SelectTrigger>
                 <SelectContent>
                   {provinces.map((province) => (
                     <SelectItem key={province} value={province}>
-                      {province.charAt(0).toUpperCase() + province.slice(1)}
+                      {capitalize(province)}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -286,16 +302,22 @@ export default function CommunitiesPage() {
             </div>
           </motion.div>
 
-          <motion.div
-            variants={container}
-            initial='hidden'
-            animate='show'
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-          >
-            {filteredCommunities.map((community) => (
-              <CommunityCard key={community.slug} community={community} />
-            ))}
-          </motion.div>
+          {isLoading ? (
+            <div className='flex justify-center items-center min-h-[200px]'>
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-primary' />
+            </div>
+          ) : (
+            <motion.div
+              variants={container}
+              initial='hidden'
+              animate='show'
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+            >
+              {filteredCommunities.map((community) => (
+                <CommunityCard key={community.slug} community={community} />
+              ))}
+            </motion.div>
+          )}
         </div>
       </div>
     </div>
