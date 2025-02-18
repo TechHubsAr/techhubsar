@@ -79,7 +79,11 @@ function CommunityDescription({ community }: { community: Community }) {
             aria-label='Twitter'
             onClick={(e) => {
               e.preventDefault();
-              window.open(`https://x.com/${community.twitter}`, '_blank', 'noopener,noreferrer');
+              window.open(
+                `https://x.com/${community.twitter}`,
+                '_blank',
+                'noopener,noreferrer'
+              );
             }}
           >
             <XformerlyTwitter className='h-4 w-4' />
@@ -104,7 +108,8 @@ function CommunityCard({ community, isHovered }: CommunityCardProps) {
         'dark:border-border/50 border-border/20',
         'transition-all duration-300 ease-out',
         'hover:bg-accent/5',
-        (localHovered || isHovered) && 'ring-2 ring-primary/50 ring-offset-2 ring-offset-background shadow-lg'
+        (localHovered || isHovered) &&
+          'ring-2 ring-primary/50 ring-offset-2 ring-offset-background shadow-lg'
       )}
     >
       <motion.div layout className='flex-none'>
@@ -133,7 +138,9 @@ export default function CommunityList({
 
   return (
     <div className='space-y-8'>
+      {/* Agregamos una key al contenedor UL, aunque normalmente no es obligatorio si no forma parte de otro map */}
       <motion.ul
+        key="community-list"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
@@ -156,17 +163,23 @@ export default function CommunityList({
 
       {totalPages > 1 && (
         <Pagination className='flex justify-center pt-8'>
-          <PaginationContent className={cn(
-            'rounded-lg border p-2',
-            'dark:bg-card/30 bg-white',
-            'dark:border-border/50 border-border/20'
-          )}>
+          <PaginationContent
+            className={cn(
+              'rounded-lg border p-2',
+              'dark:bg-card/30 bg-white',
+              'dark:border-border/50 border-border/20'
+            )}
+          >
             <PaginationItem>
               <PaginationPrevious
-                onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+                onClick={() => {
+                  if (currentPage > 1) handlePageChange(currentPage - 1);
+                }}
                 className={cn(
                   'cursor-pointer',
-                  currentPage === 1 ? 'pointer-events-none opacity-50 cursor-not-allowed' : ''
+                  currentPage === 1
+                    ? 'pointer-events-none opacity-50 cursor-not-allowed'
+                    : ''
                 )}
               />
             </PaginationItem>
@@ -176,7 +189,7 @@ export default function CommunityList({
                 <PaginationLink
                   onClick={() => handlePageChange(page)}
                   isActive={currentPage === page}
-                  className="cursor-pointer"
+                  className='cursor-pointer'
                 >
                   {page}
                 </PaginationLink>
@@ -185,10 +198,14 @@ export default function CommunityList({
 
             <PaginationItem>
               <PaginationNext
-                onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
+                onClick={() => {
+                  if (currentPage < totalPages) handlePageChange(currentPage + 1);
+                }}
                 className={cn(
                   'cursor-pointer',
-                  currentPage === totalPages ? 'pointer-events-none opacity-50 cursor-not-allowed' : ''
+                  currentPage === totalPages
+                    ? 'pointer-events-none opacity-50 cursor-not-allowed'
+                    : ''
                 )}
               />
             </PaginationItem>
