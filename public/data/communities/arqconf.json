@@ -1,0 +1,59 @@
+{
+    "id": "100",
+    "name": "ArqConf",
+    "shortDescription": "Comunidad de Arquitectos de Software, CIOs, Gerentes y Tomadores de Decisión en Tecnología.",
+    "fullDescription": "Somos una comunidad de entusiastas unidos por la pasión por la tecnología que buscan generar espacios de encuentro donde compartir experiencias, conocimientos e inquietudes que potencien nuestro recorrido. Reunimos Arquitectos de Software, CIOs, Gerentes y tomadores de decisión en Tecnología, así como estudiantes de Ingeniería de Software y Sistemas y personas aficionadas de la industria IT.",
+    "location": {
+        "lat": -34.6037,
+        "lng": -58.3816
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://arqconf.com/",
+    "twitter": "https://x.com/ArqConf",
+    "members": [
+        {
+            "name": "Santiago Blanco",
+            "linkedin": "santiagomblanco"
+        },
+        {
+            "name": "Gustavo Brey",
+            "twitter": "italchemist",
+            "linkedin":"gbrey"
+        },
+        {
+            "name": "Nicolas Gonzalez",
+            "github": "nlgonzalez",
+            "twitter": "_nlgonzalez",
+            "linkedin": "nlgonzalez"
+        },
+        {
+            "name": "Cristian Rios",
+            "linkedin": "bacdr"
+        },
+        {
+            "name": "Fabian Pezet",
+            "twitter": "fabian-eduardo-pezet-vila-842451"
+        },
+        {
+            "name": "Juan Manuel Arias",
+            "linkedin": "juanmanuelarias"
+        },
+        {
+            "name": "Pablo Gonzalez",
+            "linkedin": "pablodgonzalez"
+        },
+        {
+            "name": "Santiago Coco",
+            "linkedin": "gastoncoco"
+        },
+        {
+            "name": "Jorge Garcia"
+        },
+        {
+            "name": "Nelson Ghezzi",
+            "linkedin": "Nelson Ghezi"
+        }
+    ],
+    "slug": "arqconf-buenos-aires"
+}
