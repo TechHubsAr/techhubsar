@@ -18,10 +18,11 @@ export const metadata = {
   openGraph: {
     title: "TechHubsAr",
     description: "Discover tech communities across Argentina",
-    url: "https://techhubsar.vercel.app",
+    url: "https://techhubs.ar",
     siteName: "TechHubsAr",
     locale: "en_US",
     type: "website",
+    logo:"favicon.ico"
   },
   twitter: {
     card: "summary_large_image",
