@@ -466,5 +466,31 @@
     "id": "11",
     "name": "Debatech Formosa",
     "file": "debatech-formosa.json"
+  },
+  {
+    "id": "12",
+    "name": "FrontendCafé",
+    "shortDescription": "Comunidad latinoamericana de personas apasionadas por la tecnología.",
+    "fullDescription": "Un lugar de encuentro para conectarte con otras personas interesadas en tecnología e informática, colaborar y potenciar tus ideas",
+    "location": {
+      "lat": -34.6039005,
+      "lng": -58.3808425
+    },
+    "province": "Buenos Aires",
+    "category": "Tech Community",
+    "website": "https://frontend.cafe",
+    "twitter": "https://x.com/FrontendCafe",
+    "instagram": "https://www.instagram.com/frontendcafe_",
+    "discord": "https://discord.gg/frontendcafe",
+    "github": "https://github.com/frontendcafe",
+    "members": [
+      {
+        "name": "Ramiro Olivencia",
+        "github": "rolivencia",
+        "twitter": "rolivenc",
+        "linkedin": "rolivencia"
+      }
+    ],
+    "slug": "frontendcafe"
   }
 ]
