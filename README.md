@@ -8,6 +8,26 @@ TechHubsAr is a web application that showcases tech communities across Argentina
 - Detailed list of tech communities with quick access to their information
 - Individual community pages with full details and member information
 - Responsive design for both desktop and mobile devices
+- Integration with popular communication platforms (Twitter, WhatsApp, Telegram, and Discord)
+- SEO-friendly URLs using community name slugs
+- Optimized data loading with pre-generated JSON file
+- Automatic contributor recognition on the About page
+- Custom favicon and app icons for various devices and platforms
+
+...
+
+## Customization
+
+### Icons and Images
+
+TechHubsAr uses custom-generated icons and images for favicon, apple touch icon, Open Graph image, and Twitter card image. These are dynamically generated using Next.js 13's built-in support for icon and image generation. You can find and modify these in the following files:
+
+- `public/favicon.ico`: Favicon
+- `public/apple-touch-icon.png`: Apple touch icon
+- `app/opengraph-image.tsx`: Open Graph image
+- `app/twitter-image.tsx`: Twitter card image
+
+To customize these icons and images, you can modify the respective files to change colors, text, or add your own designs.
 
 ## Getting Started
 
