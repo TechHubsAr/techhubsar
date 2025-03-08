@@ -1,0 +1,24 @@
+{
+    "id": "1582",
+    "name": "SaltaDev",
+    "shortDescription": "Comunidad IT de Salta",
+    "fullDescription": "Has encontrado la comunidad de programación más grande de Salta, donde podrás acceder a todo lo que necesitas en un solo lugar: desde cursos y oportunidades laborales hasta una red de profesionales dispuestos a ayudarte.",
+    "location": {
+        "lat": -24.7859,
+        "lng": -65.41166
+    },
+    "province": "Salta",
+    "category": "Tech Community",
+    "website": "https://salta.dev.ar",
+    "whatsapp": "https://chat.whatsapp.com/Kxy7Kl87lWf0Ta1rhKdoE3",
+    "discord": "https://discord.gg/kqzWbStGQ6",
+    "linkedin": "https://www.linkedin.com/company/105152506",
+    "members": [
+        {
+            "name": "Facundo Padilla",
+            "github": "facundopadilla",
+            "linkedin": "facundopadilla"
+        }
+    ],
+    "slug": "saltadev"
+}
